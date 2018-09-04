@@ -1,6 +1,6 @@
 package com.ldc.spring.factory;
 
-import com.ldc.spring.model.User;
+import com.ldc.spring.core.model.User;
 
 /**
  * created by liudacheng on 2018/4/12.

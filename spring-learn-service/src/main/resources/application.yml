@@ -1,0 +1,32 @@
+
+spring.resources.static-locations: classpath:/
+
+---
+
+spring:
+  profiles: dev
+name: jim from dev!
+age: 19
+
+# 服务端口号
+server.port: 8080
+
+---
+
+spring:
+  profiles: test
+name: jim from test!
+age: 20
+
+# 服务端口号
+server.port: 8081
+
+---
+
+spring:
+  profiles: prod
+name: jim from prod!
+age: 21
+
+# 服务端口号
+server.port: 8082
