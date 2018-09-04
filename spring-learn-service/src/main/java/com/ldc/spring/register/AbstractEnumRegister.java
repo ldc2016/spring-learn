@@ -1,4 +1,4 @@
-package com.ldc.spring.service;
+package com.ldc.spring.register;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * created by liudacheng on 2018/9/4.
  */
-public abstract class AbstractEnumRegistrier<K extends Enum> {
+public abstract class AbstractEnumRegister<K extends Enum> {
 
     public <V> Map<K, V> build(V[] targetBeans) {
         ImmutableMap.Builder<K, V> mapBuilder = ImmutableMap.builder();

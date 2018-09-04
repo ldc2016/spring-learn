@@ -2,7 +2,7 @@ package com.ldc.spring.factory;
 
 import com.ldc.spring.core.enums.OperationType;
 import com.ldc.spring.service.ICustomerService;
-import com.ldc.spring.service.impl.CustomerOperationServiceRegistrier;
+import com.ldc.spring.register.CustomerOperationServiceRegister;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -19,9 +19,9 @@ public class CustomerOperationServiceFactory implements InitializingBean{
     private static Map<OperationType, ICustomerService> builders;
 
     @Autowired
-    public CustomerOperationServiceFactory(CustomerOperationServiceRegistrier customerOperationServiceRegistrier,
-                                          ICustomerService[] customerServices) {
-        builders = customerOperationServiceRegistrier.build(customerServices);
+    public CustomerOperationServiceFactory(CustomerOperationServiceRegister customerOperationServiceRegister,
+                                           ICustomerService[] customerServices) {
+        builders = customerOperationServiceRegister.build(customerServices);
     }
 
     public static CustomerOperationServiceFactory getInstance(){
