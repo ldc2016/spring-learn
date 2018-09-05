@@ -23,5 +23,4 @@ public class QueryCustomerService extends AbstractCustomerService<Customer>{
     private void doSomething(Customer customer) {
         displayCustomerInfo(customer);
     }
-
 }

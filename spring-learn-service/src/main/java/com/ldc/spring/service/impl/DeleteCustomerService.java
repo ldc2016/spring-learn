@@ -23,5 +23,4 @@ public class DeleteCustomerService extends AbstractCustomerService<Customer>{
     private void doSomething(Customer customer) {
         displayCustomerInfo(customer);
     }
-
 }

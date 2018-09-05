@@ -1,6 +1,7 @@
 package com.ldc.spring.service.impl;
 
 import com.ldc.spring.annotation.ActionType;
+import com.ldc.spring.core.annotation.LogTrace;
 import com.ldc.spring.core.enums.OperationType;
 import com.ldc.spring.model.Customer;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 @ActionType(OperationType.CREATE)
 public class AddCustomerService extends AbstractCustomerService<Customer>{
 
+    @LogTrace
     public void addCustomer(Customer customer){
         System.out.println("addCustomer, 开始插入客户信息*******");
 
