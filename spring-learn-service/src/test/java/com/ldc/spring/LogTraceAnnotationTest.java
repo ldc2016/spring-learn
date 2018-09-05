@@ -21,11 +21,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class LogTraceAnnotationTest  extends BaseSpringBootTestStarter {
 
     @Test
-    public void TestCustomerServiceFactory(){
+    public void TestAddCustomer(){
         AddCustomerService addCustomerService = (AddCustomerService) CustomerOperationServiceFactory.getInstance().getCustomerService(OperationType.CREATE);
         log.info("customerService class name :{}", addCustomerService.getClass().getName());
         Customer customer = new Customer();
-        customer.setCustomerNo("test00001");
+        customer.setCustomerNo("");
         customer.setIdCardIdNo("421381199007011331");
         customer.setMobileNo("13770526605");
         customer.setName("张丹凤");
