@@ -1,5 +1,7 @@
 package com.ldc.spring.core.model;
 
+import com.ldc.spring.core.enums.ProductType;
+import com.ldc.spring.core.enums.RepayType;
 import lombok.Data;
 
 /**
@@ -7,10 +9,16 @@ import lombok.Data;
  */
 @Data
 public class User {
+    private Long id;
     private String name;
     private Integer sex;
     private String mobilePhone;
     private String idNo;
+    private RepayType repayType;
+    private ProductType productType;
+
+    public User() {
+    }
 
     public User(String name, Integer sex, String mobilePhone, String idNo) {
         this.name = name;

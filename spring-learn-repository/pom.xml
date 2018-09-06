@@ -20,7 +20,17 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.ldc.spring</groupId>
+      <artifactId>spring-learn-common</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
 
+    <dependency>
+      <groupId>com.ldc.spring</groupId>
+      <artifactId>spring-learn-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
