@@ -1,4 +1,4 @@
-package com.ldc.spring.Utils;
+package com.ldc.spring.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

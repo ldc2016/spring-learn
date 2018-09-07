@@ -1,4 +1,4 @@
-package com.ldc.spring.Utils;
+package com.ldc.spring.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
