@@ -5,10 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.event.SmartApplicationListener;
+import org.springframework.stereotype.Component;
 
 /**
  * created by liudacheng on 2018/9/7.
  */
+@Component
 public class EventListener implements SmartApplicationListener {
     private final static Logger LOGGER = LoggerFactory.getLogger(EventListener.class);
 

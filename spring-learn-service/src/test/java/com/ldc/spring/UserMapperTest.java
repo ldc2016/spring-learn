@@ -33,14 +33,14 @@ public class UserMapperTest  extends BaseSpringBootTestStarter {
         User user = new User("张三",1,"13770546607","43212323432223323");
         user.setRepayType(RepayType.CASHIER);
         user.setProductType(ProductType.CASH_LOAN);
-        user.setId(10001L);
+        user.setId(10002L);
         long id = userRepository.addUser(user);
         log.info("id : {}",id );
     }
 
     @Test
     public void testGetById(){
-        User user = userMapper.getById(10001L);
+        User user = userMapper.getById(10002L);
         log.info("user ：" + JSON.toJSON(user));
     }
 }
