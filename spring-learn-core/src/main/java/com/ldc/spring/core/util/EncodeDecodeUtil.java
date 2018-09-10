@@ -133,8 +133,7 @@ public class EncodeDecodeUtil {
         String key32 = DEFAULT_KEY_32;
         try{
             // todo 后续可以从外部获取密钥
-            LOGGER.info("从KMS获取{}位密钥",key32.length());
-
+//            LOGGER.info("从KMS获取{}位密钥",key32.length());
         }catch(Exception e){
             return key32;
         }
@@ -143,4 +142,5 @@ public class EncodeDecodeUtil {
         }
         return key32;
     }
+
 }

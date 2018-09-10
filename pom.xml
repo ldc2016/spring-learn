@@ -167,5 +167,6 @@
        <module>spring-learn-core</module>
        <module>spring-learn-repository</module>
        <module>spring-learn-service</module>
+       <module>spring-learn-rest-adapter</module>
     </modules>
 </project>

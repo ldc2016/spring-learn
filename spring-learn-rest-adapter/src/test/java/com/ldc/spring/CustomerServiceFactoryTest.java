@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class) // SpringJUnit支持，由此引入Spring-Test框架支持！
 @SpringBootTest(classes = StartApplication.class) // 指定我们SpringBoot工程的Application启动类
 @SpringBootApplication
-public class CustomerServiceFactoryTest extends BaseSpringBootTestStarter {
+public class CustomerServiceFactoryTest {
     @Test
     public void TestCustomerServiceFactory(){
         ICustomerService customerService = CustomerOperationServiceFactory.getInstance().getCustomerService(OperationType.CREATE);

@@ -52,5 +52,6 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <import resource="classpath:datasource.xml"/>
+    <import resource="webmvc-config.xml"/>
 
 </beans>

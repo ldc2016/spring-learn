@@ -19,4 +19,9 @@ public class UserRepositoryImpl implements UserRepository {
     public long addUser(User user) {
         return userMapper.insertSelective(user);
     }
+
+    @Override
+    public User getUser(long id) {
+        return userMapper.getById(id);
+    }
 }

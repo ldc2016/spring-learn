@@ -8,4 +8,5 @@ import com.ldc.spring.core.model.User;
  */
 public interface UserRepository {
     long addUser(User user);
+    User getUser(long id);
 }
