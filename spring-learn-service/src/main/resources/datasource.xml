@@ -44,6 +44,13 @@
                 <value>classpath*:**/mappers/*.xml</value>
             </array>
         </property>
+
+        <property name="plugins">
+            <array>
+                <bean class="com.ldc.spring.core.mybatis.MybatisForceMasterDbInterceptor"/>
+            </array>
+        </property>
+
     </bean>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
