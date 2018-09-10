@@ -38,7 +38,12 @@
             <mvc:exclude-mapping path="/callback/**" />
             <bean class="com.ldc.spring.interceptor.UserInterceptor"/>
         </mvc:interceptor>
-
     </mvc:interceptors>
+
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="com.ldc.spring.reslover.SerialNoResolver"/>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
 
 </beans>
