@@ -25,6 +25,7 @@ public class UserController {
     @LogTrace
     public Response<User> queryUserById(long id) {
         User user = userRepository.getUser(10002L);
+//        throw new RuntimeException("**********test********");
         return Response.success(user);
     }
 }

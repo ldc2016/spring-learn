@@ -1,32 +1,42 @@
 
+server.port: 8080
 spring.resources.static-locations: classpath:/
 
----
+spring:
+  profiles:
+    active: dev
 
+---
 spring:
   profiles: dev
-name: jim from dev!
-age: 19
 
-# 服务端口号
-server.port: 8080
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF8&socketTimeout=60000&autoReconnect=true
+  username: root
+  password: root
+  mapperLocations: classpath*:**/mappers/*.xml
 
 ---
 
 spring:
   profiles: test
-name: jim from test!
-age: 20
 
-# 服务端口号
-server.port: 8081
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF8&socketTimeout=60000&autoReconnect=true
+  username: root
+  password: root
+  mapperLocations: classpath*:**/mappers/*.xml
 
 ---
 
 spring:
   profiles: prod
-name: jim from prod!
-age: 21
 
-# 服务端口号
-server.port: 8082
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF8&socketTimeout=60000&autoReconnect=true
+  username: root
+  password: root
+  mapperLocations: classpath*:**/mappers/*.xml
