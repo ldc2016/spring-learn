@@ -2,7 +2,7 @@ package com.ldc.spring.exceptionhandler;
 
 import com.alibaba.fastjson.JSON;
 import com.ldc.spring.core.model.ExceptionConfig;
-import com.ldc.spring.util.ResultUtil;
+import com.ldc.spring.util.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
@@ -78,8 +78,8 @@ public class ExceptionResolver implements HandlerExceptionResolver, Initializing
             response.setContentType("application/json;charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
             pw = response.getWriter();
-            Map<String, Object> errorCodeMsgMap = ResultUtil.fail(errorCode, msg);
-            pw.write(JSON.toJSONString(errorCodeMsgMap));
+            Response resultResponse = Response.fail(msg,String.valueOf(errorCode));
+            pw.write(JSON.toJSONString(resultResponse));
             pw.flush();
         } catch (Exception e) {
             logger.warn("write to response error", e);
