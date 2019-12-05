@@ -28,25 +28,24 @@
 
     <context:property-placeholder properties-ref="yamlProperties"/>
 
-    <bean id="applicationEventMulticaster"
-          class="com.ldc.spring.event.practice.DistributiveEventMulticaster">
-        <property name="syncEventMulticaster">
-            <bean class="org.springframework.context.event.SimpleApplicationEventMulticaster">
-            </bean>
-        </property>
-        <property name="asyncEventMulticaster">
-            <bean class="org.springframework.context.event.SimpleApplicationEventMulticaster">
-                <property name="taskExecutor">
-                    <bean class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-                        <property name="corePoolSize" value="5" />
-                        <property name="maxPoolSize" value="10" />
-                        <property name="keepAliveSeconds" value="100" />
-                        <property name="queueCapacity" value="10000" />
-                    </bean>
-                </property>
-            </bean>
-        </property>
-    </bean>
+    <!--<bean id="applicationEventMulticaster" class="com.ldc.spring.event.practice.DistributiveEventMulticaster">-->
+        <!--<property name="syncEventMulticaster">-->
+            <!--<bean class="org.springframework.context.event.SimpleApplicationEventMulticaster">-->
+            <!--</bean>-->
+        <!--</property>-->
+        <!--<property name="asyncEventMulticaster">-->
+            <!--<bean class="org.springframework.context.event.SimpleApplicationEventMulticaster">-->
+                <!--<property name="taskExecutor">-->
+                    <!--<bean class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">-->
+                        <!--<property name="corePoolSize" value="5" />-->
+                        <!--<property name="maxPoolSize" value="10" />-->
+                        <!--<property name="keepAliveSeconds" value="100" />-->
+                        <!--<property name="queueCapacity" value="10000" />-->
+                    <!--</bean>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
